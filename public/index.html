@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNCE BOSS - Premium Inflatable Rentals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/images/bounce-boss-logo.png" alt="BOUNCE BOSS Logo" class="h-16">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="nav-link active">Home</a>
+                    <a href="/bounce-houses.html" class="nav-link">Bounce Houses</a>
+                    <a href="/booking.html" class="nav-link">Book Now</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:(250) 218-1696" class="flex items-center text-gray-600 hover:text-primary">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>(250) 218-1696</span>
+                    </a>
+                    <a href="mailto:bouncebossinflatablez@gmail.com" class="flex items-center text-gray-600 hover:text-primary">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>bouncebossinflatablez@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 hover:text-primary" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="flex justify-end mb-8">
+                <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-primary">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/bounce-houses.html" class="nav-link">Bounce Houses</a>
+                <a href="/booking.html" class="nav-link">Book Now</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Where gravity takes a holiday!</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Create an unforgettable event with us!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/booking.html" class="btn btn-primary">
+                    <i class="fas fa-calendar-alt mr-2"></i>Book Now!
+                </a>
+                <a href="/bounce-houses.html" class="btn btn-secondary">
+                    <i class="fas fa-search mr-2"></i>View Our Inventory
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">It's Party Time!</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                We have everything you need to throw unforgettable, once in a lifetime events. Whether it's in your backyard or a huge corporate event, we specialize in making sure your event is a fun, stress free experience from start to finish.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-home text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Single/Combo Bouncers</h3>
+                    <p class="text-gray-600">Everything you need to throw the ultimate event, party or sale.</p>
+                    <a href="/bounce-houses.html" class="btn btn-primary mt-4">Browse</a>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-wind text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Sky Dancers</h3>
+                    <p class="text-gray-600">Create a lively, engaging, attractive way to bring attention to any event.</p>
+                    <a href="/bounce-houses.html#sky-dancers" class="btn btn-primary mt-4">Browse</a>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-gamepad text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Games</h3>
+                    <p class="text-gray-600">Looking to spice up your event even more? Let us bring the fun to you! (Coming Soon)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cleaning Process Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">3-Step Clean Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-broom text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Step 1: Sweep</h3>
+                    <p class="text-gray-600">All Dust, Dirt, & Debris</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-spray-can text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Step 2: Deep Clean</h3>
+                    <p class="text-gray-600">Deep Clean Unit with Cleaner & Sanitizer</p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+                        <i class="fas fa-check-circle text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Step 3: Ready</h3>
+                    <p class="text-gray-600">Clean, Sanitized & Ready for Fun!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Our Customers Are Saying...</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Amazing service. Fast delivery on short notice. Appreciate the Mother's Day drop off to keep the kids occupied while my wife relaxes for the day."</p>
+                    <p class="font-bold">- Kevin Holliston</p>
+                </div>
+
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We just had bounce boss over with an inflatable for my daughter's birthday. Everything was awesome, they were professional, on time and the inflatable was awesome. Kids were very happy, I would definitely be a return customer."</p>
+                    <p class="font-bold">- James Eccles</p>
+                </div>
+
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Bounce Boss Inflatables provided an outstanding experience for a mothers day get-together! The kids had an absolute blast for hours. The inflatable castle was in excellent condition, clean, and perfectly safe for all ages."</p>
+                    <p class="font-bold">- Mr. Pets Courtenay</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Stress-Free. Fun. Done.</h2>
+            <p class="text-xl mb-8">Book with us for the event of a lifetime today!</p>
+            <a href="/booking.html" class="btn bg-white text-primary hover:bg-gray-100 hover:-translate-y-1 transition-all duration-300">
+                Book An Event Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BOUNCE BOSS INFLATABLES</h3>
+                    <p class="text-gray-300">
+                        Where gravity takes a holiday! Providing quality bounce houses and inflatable rentals for all your events.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/bounce-houses.html" class="footer-link">Bounce Houses</a></li>
+                        <li><a href="/booking.html" class="footer-link">Book Now</a></li>
+                        <li><a href="/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><i class="fas fa-envelope mr-2"></i>bouncebossinflatablez@gmail.com</li>
+                        <li><i class="fas fa-phone mr-2"></i>(250) 218-1696</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Comox Valley, British Columbia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 Bounce Boss. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

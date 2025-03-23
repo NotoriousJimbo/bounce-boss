@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Receipt - Bounce Boss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #4f46e5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9fafb;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .receipt {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #e5e7eb;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .amount {
+      text-align: right;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Payment Receipt</h1>
+    </div>
+    
+    <div class="content">
+      <p>Hello {{customerName}},</p>
+      
+      <p>Thank you for your payment. This email serves as your official receipt for your Bounce Boss booking.</p>
+      
+      <div class="receipt">
+        <h2>Receipt Details</h2>
+        <p><strong>Transaction Date:</strong> {{transactionDate}}</p>
+        <p><strong>Payment Method:</strong> {{paymentMethod}}</p>
+        <p><strong>Transaction ID:</strong> {{transactionId}}</p>
+        
+        <h3>Order Summary</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Description</th>
+              <th class="amount">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each items}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{description}}</td>
+              <td class="amount">${{price}}</td>
+            </tr>
+            {{/each}}
+            {{#if discountAmount}}
+            <tr>
+              <td>Discount</td>
+              <td>{{discountCode}}</td>
+              <td class="amount">-${{discountAmount}}</td>
+            </tr>
+            {{/if}}
+            <tr>
+              <td colspan="2">Subtotal</td>
+              <td class="amount">${{subtotal}}</td>
+            </tr>
+            <tr>
+              <td colspan="2">Tax ({{taxRate}}%)</td>
+              <td class="amount">${{taxAmount}}</td>
+            </tr>
+            <tr class="total">
+              <td colspan="2">Total</td>
+              <td class="amount">${{totalAmount}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <h3>Booking Information</h3>
+      <p><strong>Event Date:</strong> {{eventDate}}</p>
+      <p><strong>Setup Time:</strong> {{setupTime}}</p>
+      <p><strong>Pickup Time:</strong> {{pickupTime}}</p>
+      <p><strong>Location:</strong> {{location}}</p>
+      
+      <p>You can view your complete booking details by clicking the button below:</p>
+      
+      <p style="text-align: center;">
+        <a href="{{bookingUrl}}" class="btn">View Booking Details</a>
+      </p>
+      
+      <p>If you have any questions about this receipt or your booking, please don't hesitate to contact us at <a href="mailto:support@bounceboss.com">support@bounceboss.com</a> or call us at (555) 123-4567.</p>
+      
+      <p>Thank you for choosing Bounce Boss!</p>
+      
+      <p>Best regards,<br>
+      The Bounce Boss Team</p>
+    </div>
+    
+    <div class="footer">
+      <p>© 2025 Bounce Boss | Comox Valley's Premier Bounce House Rental Service</p>
+      <p>This receipt was sent to {{customerEmail}}</p>
+      <p>Please keep this receipt for your records.</p>
+    </div>
+  </div>
+</body>
+</html>

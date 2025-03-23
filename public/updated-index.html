@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNCE BOSS INFLATABLES - Comox Valley BC</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF1B6B;    /* Hot pink from logo */
+            --secondary: #8A2BE2;  /* Purple from logo */
+            --accent: #00B4D8;     /* Blue from logo towers */
+            --orange: #FF8C42;     /* Orange from logo towers */
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid transparent;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #e01861;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: white;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-secondary:hover {
+            background-color: #fff5f8;
+            transform: translateY(-2px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        .feature-card {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .testimonial-card {
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .clean-step {
+            border-radius: 9999px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-4">
+                    <img src="/images/bounce-boss-logo.png" alt="BOUNCE BOSS Logo" class="h-20 w-auto">
+                </div>
+
+                <!-- Contact Info - Desktop -->
+                <div class="hidden md:flex flex-col items-end">
+                    <a href="tel:2502181696" class="text-gray-700 hover:text-primary transition-colors">
+                        <i class="fas fa-phone mr-2"></i>(250) 218-1696
+                    </a>
+                    <a href="mailto:bouncebossinflatablez@gmail.com" class="text-gray-700 hover:text-primary transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>bouncebossinflatablez@gmail.com
+                    </a>
+                </div>
+
+                <!-- Navigation - Desktop -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="text-gray-700 hover:text-primary font-semibold transition-colors">Home</a></li>
+                        <li><a href="#bounce-houses" class="text-gray-700 hover:text-primary transition-colors">Bounce Houses</a></li>
+                        <li><a href="#sky-dancers" class="text-gray-700 hover:text-primary transition-colors">Sky Dancers</a></li>
+                        <li><a href="#about" class="text-gray-700 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 hover:text-primary transition-colors" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-3">
+                <a href="#" class="block text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#bounce-houses" class="block text-gray-700 hover:text-primary transition-colors">Bounce Houses</a>
+                <a href="#sky-dancers" class="block text-gray-700 hover:text-primary transition-colors">Sky Dancers</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary transition-colors">About Us</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <div class="py-2 border-t border-gray-200">
+                    <a href="tel:2502181696" class="block text-gray-700 hover:text-primary transition-colors">
+                        <i class="fas fa-phone mr-2"></i>(250) 218-1696
+                    </a>
+                    <a href="mailto:bouncebossinflatablez@gmail.com" class="block text-gray-700 hover:text-primary transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>bouncebossinflatablez@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white">
+            <div class="container mx-auto px-6 py-24">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            Where Gravity Takes a Holiday!
+                        </h1>
+                        <p class="text-xl mb-8 opacity-90">
+                            Your local go-to for inflatable, bounce house, and party rentals in the Comox Valley and surrounding areas.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="booking.html" 
+                               class="btn bg-white text-primary hover:bg-gray-100 text-lg font-semibold py-4 px-8 rounded-full shadow-lg transition duration-300 text-center">
+                                Book Now!
+                            </a>
+                            <a href="#bounce-houses" 
+                               class="btn border-2 border-white text-white hover:bg-white hover:text-primary text-lg font-semibold py-4 px-8 rounded-full transition duration-300 text-center">
+                                View Products
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                        <img src="/images/bounce-boss-logo.png" 
+                             alt="Bounce Boss Logo" 
+                             class="w-full max-w-md transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">We are your inflatables specialists!</h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Create unforgettable memories with our premium selection of bounce houses and party rentals
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Bounce Houses Card -->
+                    <div class="feature-card bg-gradient-to-br from-white to-pink-50 text-center group">
+                        <div class="relative mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg"></div>
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Bounce+Houses"
+                                alt="Bounce Houses" 
+                                class="rounded-lg shadow-md w-full h-48 object-cover"
+                            />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Single/Combo bouncers</h3>
+                        <p class="text-gray-600 mb-6">
+                            Everything you need to throw the ultimate event, party or sale. Perfect for birthdays, festivals, and special occasions!
+                        </p>
+                        <a href="#bounce-houses" class="inline-flex items-center text-primary font-semibold hover:text-secondary transition-colors">
+                            Browse Selection
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Sky Dancers Card -->
+                    <div class="feature-card bg-gradient-to-br from-white to-purple-50 text-center group">
+                        <div class="relative mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg"></div>
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Sky+Dancers"
+                                alt="Sky Dancers" 
+                                class="rounded-lg shadow-md w-full h-48 object-cover"
+                            />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Sky Dancers</h3>
+                        <p class="text-gray-600 mb-6">
+                            Create a lively, engaging, attractive way to bring attention to any event. Perfect for grand openings and special promotions!
+                        </p>
+                        <a href="#sky-dancers" class="inline-flex items-center text-secondary font-semibold hover:text-primary transition-colors">
+                            Browse Selection
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Games Card -->
+                    <div class="feature-card bg-gradient-to-br from-white to-blue-50 text-center group">
+                        <div class="relative mb-6 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-orange/20 rounded-lg"></div>
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Games"
+                                alt="Games" 
+                                class="rounded-lg shadow-md w-full h-48 object-cover"
+                            />
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Games & More</h3>
+                        <p class="text-gray-600 mb-6">
+                            Looking to spice up your event even more? Let us bring the fun to you with our selection of party games and activities!
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-accent font-semibold hover:text-primary transition-colors">
+                            Contact Us
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Popular Rentals</h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Check out our most-loved bounce houses and party rentals
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Castle Combo -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Castle+Combo"
+                                alt="Castle Combo Bounce House" 
+                                class="w-full h-56 object-cover"
+                            />
+                            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Most Popular
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Castle Combo</h3>
+                            <p class="text-gray-600 mb-4">
+                                Perfect for princess parties and royal celebrations! Includes bounce area and slide.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$249/day</span>
+                                <a href="booking.html" class="btn-secondary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sports Arena -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Sports+Arena"
+                                alt="Sports Arena Bounce House" 
+                                class="w-full h-56 object-cover"
+                            />
+                            <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                New Arrival
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Sports Arena</h3>
+                            <p class="text-gray-600 mb-4">
+                                Basketball hoop and bounce area combined! Perfect for active kids.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$199/day</span>
+                                <a href="booking.html" class="btn-secondary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Giant Sky Dancer -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="relative">
+                            <img 
+                                src="https://via.placeholder.com/400x300?text=Sky+Dancer"
+                                alt="Giant Sky Dancer" 
+                                class="w-full h-56 object-cover"
+                            />
+                            <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">
+                                Best Value
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Giant Sky Dancer</h3>
+                            <p class="text-gray-600 mb-4">
+                                20ft tall attention grabber! Perfect for business events and promotions.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-bold text-primary">$149/day</span>
+                                <a href="booking.html" class="btn-secondary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="booking.html" class="btn-primary inline-flex items-center">
+                        View All Products
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Why Choose Bounce Boss?</h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    We're committed to making your event extraordinary with our premium service and attention to detail
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Safety First -->
+                    <div class="text-center">
+                        <div class="clean-step bg-pink-100 text-primary mb-6">
+                            <i class="fas fa-shield-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Safety First</h3>
+                        <p class="text-gray-600">
+                            All our inflatables are thoroughly inspected and cleaned before each rental
+                        </p>
+                    </div>
+
+                    <!-- Professional Service -->
+                    <div class="text-center">
+                        <div class="clean-step bg-purple-100 text-secondary mb-6">
+                            <i class="fas fa-award text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Professional Service</h3>
+                        <p class="text-gray-600">
+                            Expert setup and takedown included with every rental
+                        </p>
+                    </div>
+
+                    <!-- Local Business -->
+                    <div class="text-center">
+                        <div class="clean-step bg-blue-100 text-accent mb-6">
+                            <i class="fas fa-home text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Locally Owned</h3>
+                        <p class="text-gray-600">
+                            Proudly serving the Comox Valley and surrounding areas
+                        </p>
+                    </div>
+
+                    <!-- Easy Booking -->
+                    <div class="text-center">
+                        <div class="clean-step bg-orange-100 text-orange mb-6">
+                            <i class="fas fa-calendar-check text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Easy Booking</h3>
+                        <p class="text-gray-600">
+                            Simple online booking system with instant confirmation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">How It Works</h2>
+                <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+                    Renting with Bounce Boss is easy! Follow these simple steps
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">1</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">Choose Your Rental</h3>
+                        <p class="text-gray-600 text-center">
+                            Browse our selection and pick the perfect inflatable for your event
+                        </p>
+                        <!-- Connector Line (hidden on mobile) -->
+                        <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-primary transform -translate-x-4"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">2</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">Book Online</h3>
+                        <p class="text-gray-600 text-center">
+                            Select your date and complete the simple booking process
+                        </p>
+                        <!-- Connector Line (hidden on mobile) -->
+                        <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-secondary transform -translate-x-4"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">3</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">We Deliver & Setup</h3>
+                        <p class="text-gray-600 text-center">
+                            Our team handles delivery, setup, and safety checks
+                        </p>
+                        <!-- Connector Line (hidden on mobile) -->
+                        <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-accent transform -translate-x-4"></div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative">
+                        <div class="flex items-center justify-center">
+                            <div class="w-16 h-16 bg-orange text-white rounded-full flex items-center justify-center text-2xl font-bold mb-6">4</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4">Enjoy Your Event!</h3>
+                        <p class="text-gray-600 text-center">
+                            Have fun! We'll handle takedown when you're done
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="booking.html" class="btn-primary inline-flex items-center">
+                        Start Booking Now
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile CTA Banner -->
+        <div class="bg-primary text-white py-4 px-6 md:hidden">
+            <div class="flex justify-between items-center">
+                <a href="tel:2502181696" class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>Call Now</span>
+                </a>
+                <a href="booking.html" class="bg-white text-primary px-4 py-2 rounded-full font-semibold">
+                    Book Online
+                </a>
+            </div>
+        </div>
+
+        <script>
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        </script>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BOUNCE BOSS INFLATABLES</h3>
+                    <p class="text-gray-300 mb-4">
+                        Where gravity takes a holiday!
+                    </p>
+                    <p class="text-gray-300">
+                        Providing quality bounce houses and inflatable rentals for all your events.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="#bounce-houses" class="text-gray-300 hover:text-white">Bounce Houses</a></li>
+                        <li><a href="#sky-dancers" class="text-gray-300 hover:text-white">Sky Dancers</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="mailto:bouncebossinflatablez@gmail.com" class="text-gray-300 hover:text-white">bouncebossinflatablez@gmail.com</a></li>
+                        <li><a href="tel:2502181696" class="text-gray-300 hover:text-white">(250) 218-1696</a></li>
+                        <li>Comox Valley, British Columbia V9M3K7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 BOUNCE BOSS INFLATABLES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

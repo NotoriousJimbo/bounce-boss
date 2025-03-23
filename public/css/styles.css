@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand Colors */
+:root {
+    --primary: #FF1B6B;
+    --primary-light: rgba(255, 27, 107, 0.1);
+    --primary-dark: #e01861;
+    --secondary: #8A2BE2;
+    --secondary-light: rgba(138, 43, 226, 0.1);
+    --secondary-dark: #6a1eb0;
+    --accent: #00B4D8;
+    --accent-light: rgba(0, 180, 216, 0.1);
+    --accent-dark: #0090ad;
+    --orange: #FF8C42;
+}
+
+@layer base {
+    body {
+        @apply font-sans text-gray-800;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+}
+
+@layer components {
+    /* Navigation */
+    .nav-link {
+        @apply text-gray-700 hover:text-primary transition-all duration-300 relative px-4 py-2;
+    }
+
+    .nav-link::after {
+        @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        @apply w-full;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-to-r from-primary to-secondary text-white hover:from-primary-dark hover:to-secondary-dark hover:-translate-y-0.5 hover:shadow-lg;
+    }
+
+    .btn-secondary {
+        @apply bg-white text-primary border-2 border-primary hover:bg-primary-light hover:-translate-y-0.5;
+    }
+
+    /* Cards */
+    .card {
+        @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    }
+
+    /* Form Elements */
+    .form-input {
+        @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-gray-700 mb-1;
+    }
+
+    /* Progress Steps */
+    .progress-step {
+        @apply flex items-center;
+    }
+
+    .progress-step-number {
+        @apply w-8 h-8 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center font-bold;
+    }
+
+    .progress-step.active .progress-step-number {
+        @apply ring-4 ring-primary-light;
+    }
+
+    .progress-line {
+        @apply h-1 flex-1 bg-gray-200;
+    }
+
+    .progress-line.completed {
+        @apply bg-gradient-to-r from-primary to-secondary;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        @apply fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 p-6;
+    }
+
+    .mobile-menu.active {
+        @apply translate-x-0;
+    }
+
+    /* Footer */
+    .footer {
+        @apply bg-gray-800 text-white py-16;
+    }
+
+    .footer-link {
+        @apply text-gray-300 hover:text-white transition-colors duration-200;
+    }
+
+    .hero {
+        @apply py-24 bg-gradient-to-br from-primary-light to-secondary-light;
+    }
+}
+
+@layer utilities {
+    .animate-fadeIn {
+        animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Neutral Colors */
+:root {
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+    
+    /* Utility Colors */
+    --success: #10B981;
+    --warning: #F59E0B;
+    --error: #EF4444;
+    --info: #3B82F6;
+}
+
+/* Typography */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: var(--gray-800);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Grid and Layout */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Features */
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+/* Utilities */
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-accent { color: var(--accent); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-accent { background-color: var(--accent); }
+.bg-success { background-color: var(--success); }
+.bg-warning { background-color: var(--warning); }
+.bg-danger { background-color: var(--danger); }
+
+/* Booking Steps */
+.booking-step {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.booking-step.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.step-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gray-200);
+    z-index: 0;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    /* Container Spacing */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Form Elements */
+    .step-indicator {
+        padding: 0 0.5rem;
+    }
+    
+    .booking-form {
+        padding: 1rem;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+    
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Touch-friendly controls */
+    .btn {
+        padding: 0.75rem 1rem;
+        min-height: 3rem;
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Improve spacing in mobile menu */
+    .mobile-menu {
+        width: 80% !important;
+        padding: 1.5rem;
+    }
+    
+    /* Form grid adjustments */
+    .grid-cols-1 {
+        grid-gap: 1rem;
+    }
+    
+    /* Enhanced touch targets for form elements */
+    .form-input, 
+    .quantity-btn, 
+    select {
+        min-height: 3rem;
+    }
+    
+    /* Fix booking steps display */
+    .progress-step-number {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .step-label {
+        font-size: 0.7rem;
+    }
+    
+    /* Fix card spacing */
+    .card {
+        padding: 1rem;
+    }
+}
+
+/* Small Phone Optimization */
+@media (max-width: 480px) {
+    /* Further reduce padding */
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    /* Smaller headings */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Booking form adjustments */
+    .booking-step {
+        padding: 0.75rem;
+    }
+    
+    /* Increase spacing between stacked elements */
+    .form-label {
+        margin-top: 0.75rem;
+    }
+    
+    /* Center buttons on very small screens */
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    /* Make footer elements stack better */
+    .footer {
+        text-align: center;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

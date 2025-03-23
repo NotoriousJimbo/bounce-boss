@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Bounce Boss</title>
+    <link rel="stylesheet" href="/css/output.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafb;
+            padding: 0 20px;
+        }
+        
+        .error-container {
+            max-width: 700px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 20px 0;
+        }
+        
+        h1 {
+            color: #2563eb;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .error-code {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #e5e7eb;
+            margin: 20px 0;
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #4b5563;
+            margin-bottom: 30px;
+        }
+        
+        .bounce-animation {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div id="errorIcon" class="bounce-animation">
+            <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 8V12" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 16H12.01" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        
+        <h1>Oops! Something went wrong</h1>
+        <div id="errorCode" class="error-code">500</div>
+        <p class="error-message">We're experiencing some technical difficulties right now. Please try again in a few moments.</p>
+        
+        <div class="actions">
+            <a href="/" class="btn-primary">Return to Homepage</a>
+        </div>
+        <p style="margin-top: 20px; color: #6b7280;">If the problem persists, please <a href="/contact" style="color: #3b82f6; text-decoration: underline;">contact us</a> for assistance.</p>
+    </div>
+
+    <script>
+        // Get error status from URL query parameter
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get('status') || '500';
+        
+        // Update the error code display
+        document.getElementById('errorCode').textContent = status;
+        
+        // Change message based on error code
+        const errorMessage = document.querySelector('.error-message');
+        
+        if (status === '404') {
+            document.title = 'Page Not Found - Bounce Boss';
+            errorMessage.textContent = 'The page you are looking for doesn\'t exist or has been moved.';
+        } else if (status === '403') {
+            document.title = 'Access Denied - Bounce Boss';
+            errorMessage.textContent = 'You don\'t have permission to access this resource.';
+        } else if (status === '401') {
+            document.title = 'Unauthorized - Bounce Boss';
+            errorMessage.textContent = 'Please log in to access this resource.';
+        } else if (status === '400') {
+            document.title = 'Bad Request - Bounce Boss';
+            errorMessage.textContent = 'The request could not be understood by the server due to malformed syntax.';
+        }
+    </script>
+</body>
+</html>

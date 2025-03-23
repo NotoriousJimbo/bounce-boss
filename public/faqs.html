@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - BOUNCE BOSS INFLATABLES</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid transparent;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #e91e63;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #c2185b;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: white;
+            color: #e91e63;
+            border-color: #e91e63;
+        }
+        .btn-secondary:hover {
+            background-color: #fce4ec;
+            transform: translateY(-2px);
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item:hover {
+            background-color: #fdf2f6;
+        }
+        .faq-question {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-pink-600 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="updated-index.html" class="flex items-center space-x-2">
+                    <img src="https://via.placeholder.com/60x60?text=BB" alt="BOUNCE BOSS Logo" class="h-16 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold">BOUNCE BOSS</span>
+                        <span class="text-sm italic">Where gravity takes a holiday!</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="hidden md:block">
+                <div class="flex flex-col items-end mb-2">
+                    <a href="tel:2502181696" class="text-white hover:underline"><i class="fas fa-phone mr-2"></i>(250) 218-1696</a>
+                    <a href="mailto:bouncebossinflatablez@gmail.com" class="text-white hover:underline"><i class="fas fa-envelope mr-2"></i>bouncebossinflatablez@gmail.com</a>
+                </div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="updated-index.html" class="hover:underline">Home</a></li>
+                    <li><a href="updated-index.html#bounce-houses" class="hover:underline">Bounce Houses</a></li>
+                    <li><a href="updated-index.html#sky-dancers" class="hover:underline">Sky Dancers</a></li>
+                    <li><a href="updated-index.html#about" class="hover:underline">About Us</a></li>
+                    <li><a href="faqs.html" class="hover:underline font-semibold">FAQs</a></li>
+                    <li><a href="updated-index.html#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-pink-600 text-white py-12">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold mb-4">Frequently Asked Questions</h1>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Browse our most frequently asked questions list below to learn everything you need to know!
+                </p>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="faq-item py-5">
+                        <div class="faq-question flex justify-between items-center" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">Are your rentals clean?</h3>
+                            <i class="fas fa-chevron-down text-pink-600 transition-transform"></i>
+                        </div>
+                        <div class="faq-answer pt-4 pl-0">
+                            <p class="text-gray-600">
+                                Absolutely! We take cleanliness very seriously. Each inflatable rental undergoes our thorough 3-step cleaning process after every use:
+                            </p>
+                            <ol class="list-decimal pl-6 mt-4 space-y-2 text-gray-600">
+                                <li><strong>Sweep:</strong> We remove all dust, dirt, and debris</li>
+                                <li><strong>Deep Clean:</strong> We thoroughly clean each unit with cleaner and sanitizer</li>
+                                <li><strong>Final Check:</strong> We ensure everything is clean, sanitized, and ready for fun!</li>
+                            </ol>
+                            <p class="text-gray-600 mt-4">
+                                We pride ourselves in providing clean and safe rentals. Each unit is cleaned and sanitized after every rental to guarantee your safety and satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item py-5">
+                        <div class="faq-question flex justify-between items-center" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">Do your units contain any lead in the vinyl and are they safe?</h3>
+                            <i class="fas fa-chevron-down text-pink-600 transition-transform"></i>
+                        </div>
+                        <div class="faq-answer pt-4 pl-0">
+                            <p class="text-gray-600">
+                                Safety is our top priority. All our bounce houses and inflatables are made with commercial-grade, lead-free vinyl that meets or exceeds all safety regulations and standards. We regularly inspect our equipment to ensure it remains in excellent condition for your safety.
+                            </p>
+                            <p class="text-gray-600 mt-4">
+                                We absolutely will not sacrifice your safety for business. EVER. All our products undergo regular maintenance checks and are cleaned thoroughly between each use.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item py-5">
+                        <div class="faq-question flex justify-between items-center" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">What type of parties and events do you provide rentals for?</h3>
+                            <i class="fas fa-chevron-down text-pink-600 transition-transform"></i>
+                        </div>
+                        <div class="faq-answer pt-4 pl-0">
+                            <p class="text-gray-600">
+                                We provide rentals for virtually all types of events! Our inflatable rentals are perfect for:
+                            </p>
+                            <ul class="list-disc pl-6 mt-4 space-y-2 text-gray-600">
+                                <li>Birthday parties</li>
+                                <li>School events and fundraisers</li>
+                                <li>Corporate events</li>
+                                <li>Community festivals</li>
+                                <li>Church events</li>
+                                <li>Block parties</li>
+                                <li>Family reunions</li>
+                                <li>Grand openings and sales events (especially our Sky Dancers)</li>
+                                <li>And many more!</li>
+                            </ul>
+                            <p class="text-gray-600 mt-4">
+                                Whether it's in your backyard or a huge corporate event, we specialize in making sure your event is a fun, stress-free experience from start to finish.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item py-5">
+                        <div class="faq-question flex justify-between items-center" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">Can I use a water hose on a bounce house?</h3>
+                            <i class="fas fa-chevron-down text-pink-600 transition-transform"></i>
+                        </div>
+                        <div class="faq-answer pt-4 pl-0">
+                            <p class="text-gray-600">
+                                Unless specifically designated as a water slide or water bounce house, we do not recommend using water with our standard bounce houses. Water can make the jumping surface slippery and potentially dangerous. 
+                            </p>
+                            <p class="text-gray-600 mt-4">
+                                If you're interested in a water feature for your event, please ask about our specialized water inflatables that are designed for safe water play. These units are specifically designed with proper drainage and slip-resistant surfaces.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item py-5">
+                        <div class="faq-question flex justify-between items-center" onclick="toggleFAQ(this)">
+                            <h3 class="text-xl font-semibold text-gray-800">Does the rental have to be set up on grass?</h3>
+                            <i class="fas fa-chevron-down text-pink-600 transition-transform"></i>
+                        </div>
+                        <div class="faq-answer pt-4 pl-0 active">
+                            <p class="text-gray-600">
+                                Our inflatables can be set up on grass, cement, concrete, asphalt, or even indoors with a different anchoring system available for every possible combination. When placing your reservation, please let us know on what type of terrain your rental will be installed.
+                            </p>
+                            <p class="text-gray-600 mt-4">
+                                Inflatables that are setup on grass are anchored with long steel stakes, while inflatables that are setup on other surfaces or indoors are anchored with sandbags.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <h3 class="text-2xl font-bold mb-6">Still have questions?</h3>
+                    <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Feel free to reach out to us anytime. We're here to help make your event planning as easy and enjoyable as possible!
+                    </p>
+                    <a href="updated-index.html#contact" class="btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BOUNCE BOSS INFLATABLES</h3>
+                    <p class="text-gray-300 mb-4">
+                        Where gravity takes a holiday!
+                    </p>
+                    <p class="text-gray-300">
+                        Providing quality bounce houses and inflatable rentals for all your events.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="updated-index.html" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="updated-index.html#bounce-houses" class="text-gray-300 hover:text-white">Bounce Houses</a></li>
+                        <li><a href="updated-index.html#sky-dancers" class="text-gray-300 hover:text-white">Sky Dancers</a></li>
+                        <li><a href="updated-index.html#about" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="faqs.html" class="text-gray-300 hover:text-white">FAQs</a></li>
+                        <li><a href="updated-index.html#contact" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="mailto:bouncebossinflatablez@gmail.com" class="text-gray-300 hover:text-white">bouncebossinflatablez@gmail.com</a></li>
+                        <li><a href="tel:2502181696" class="text-gray-300 hover:text-white">(250) 218-1696</a></li>
+                        <li>Comox Valley, British Columbia V9M3K7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 BOUNCE BOSS INFLATABLES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        // Automatically open the first FAQ item
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstQuestion = document.querySelector('.faq-question');
+            if (firstQuestion) {
+                firstQuestion.nextElementSibling.classList.add('active');
+                firstQuestion.querySelector('i').style.transform = 'rotate(180deg)';
+            }
+        });
+    </script>
+</body>
+</html>

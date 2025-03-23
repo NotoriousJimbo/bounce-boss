@@ -1,0 +1,42 @@
+{
+  "name": "bounce_boss",
+  "version": "1.0.0",
+  "description": "Bounce Boss Inflatables - Comox Valley's Premier Bounce House Rental Service",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "build:css": "tailwindcss -i ./public/css/styles.css -o ./public/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-winston": "^4.2.0",
+    "googleapis": "^148.0.0",
+    "http-errors": "^2.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "luxon": "^3.4.4",
+    "nodemailer": "^6.10.0",
+    "stripe": "^17.7.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.17",
+    "nodemon": "^3.1.9",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

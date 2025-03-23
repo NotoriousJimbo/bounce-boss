@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation - Bounce Boss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: #4f46e5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f9fafb;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .booking-details {
+      background-color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #e5e7eb;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #4f46e5;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Your Booking is Confirmed!</h1>
+    </div>
+    
+    <div class="content">
+      <p>Hello {{customerName}},</p>
+      
+      <p>Thank you for choosing Bounce Boss for your upcoming event! We're excited to be a part of your special day. Your booking has been confirmed, and we're looking forward to providing you with a fantastic bounce house experience.</p>
+      
+      <div class="booking-details">
+        <h2>Booking Details</h2>
+        <table>
+          <tr>
+            <th>Booking ID:</th>
+            <td>{{bookingId}}</td>
+          </tr>
+          <tr>
+            <th>Event Date:</th>
+            <td>{{eventDate}}</td>
+          </tr>
+          <tr>
+            <th>Setup Time:</th>
+            <td>{{setupTime}}</td>
+          </tr>
+          <tr>
+            <th>Pickup Time:</th>
+            <td>{{pickupTime}}</td>
+          </tr>
+          <tr>
+            <th>Location:</th>
+            <td>{{location}}</td>
+          </tr>
+          <tr>
+            <th>Product(s):</th>
+            <td>{{products}}</td>
+          </tr>
+        </table>
+      </div>
+      
+      <h3>What's Next?</h3>
+      <p>Our team will arrive at your event location at the scheduled setup time. Please ensure that the area is clear and accessible for our team to set up the equipment safely.</p>
+      
+      <p>If you need to make any changes to your booking, please contact us as soon as possible at <a href="mailto:support@bounceboss.com">support@bounceboss.com</a> or call us at (555) 123-4567.</p>
+      
+      <p>You can view your full booking details and receipt by clicking the button below:</p>
+      
+      <p style="text-align: center;">
+        <a href="{{bookingUrl}}" class="btn">View Booking Details</a>
+      </p>
+      
+      <p class="highlight">Important Safety Guidelines:</p>
+      <ul>
+        <li>Adult supervision is required at all times.</li>
+        <li>No food, drinks, or shoes inside the bounce house.</li>
+        <li>No flips or rough play.</li>
+        <li>If weather conditions become unsafe (heavy rain, wind over 15mph), please evacuate the bounce house immediately and contact us.</li>
+      </ul>
+      
+      <p>Thank you again for choosing Bounce Boss. We hope you have a wonderful event!</p>
+      
+      <p>Best regards,<br>
+      The Bounce Boss Team</p>
+    </div>
+    
+    <div class="footer">
+      <p>© 2025 Bounce Boss | Comox Valley's Premier Bounce House Rental Service</p>
+      <p>If you have any questions, please email us at <a href="mailto:support@bounceboss.com">support@bounceboss.com</a></p>
+    </div>
+  </div>
+</body>
+</html>

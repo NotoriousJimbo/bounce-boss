@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOUNCE BOSS - Booking System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="/" class="flex items-center space-x-2">
+                    <img src="/images/bounce-boss-logo.png" alt="BOUNCE BOSS Logo" class="h-16">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/bounce-houses.html" class="nav-link">Bounce Houses</a>
+                    <a href="/booking.html" class="nav-link active">Book Now</a>
+                    <a href="/about.html" class="nav-link">About</a>
+                    <a href="/contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:(250) 218-1696" class="flex items-center text-gray-600 hover:text-primary">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span>(250) 218-1696</span>
+                    </a>
+                    <a href="mailto:bouncebossinflatablez@gmail.com" class="flex items-center text-gray-600 hover:text-primary">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span>bouncebossinflatablez@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 hover:text-primary" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="flex justify-end mb-8">
+                <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-primary">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/bounce-houses.html" class="nav-link">Bounce Houses</a>
+                <a href="/booking.html" class="nav-link active">Book Now</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="py-8">
+            <!-- Progress bar -->
+            <div class="max-w-3xl mx-auto mb-8">
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="text-left">
+                            <span class="text-sm font-semibold inline-block text-gray-700">
+                                Booking Details
+                            </span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-sm font-semibold inline-block text-blue-600">
+                                Terms & Agreement
+                            </span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-sm font-semibold inline-block text-gray-700">
+                                Payment
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                        <div 
+                            style="width: 66%" 
+                            class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600 transition-all duration-500"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terms & Agreement -->
+            <div class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-4">Terms & Conditions</h2>
+                <p class="text-gray-600 mb-4">
+                    Please read and agree to our terms and conditions before proceeding with your booking.
+                </p>
+                
+                <div class="terms-scroll-box">
+                    <h3 class="text-xl font-semibold mb-2">BOUNCE BOSS Rental Agreement</h3>
+                    
+                    <p class="mb-3">This agreement outlines the terms and conditions for renting inflatable equipment from BOUNCE BOSS. By agreeing to these terms, you acknowledge and accept the following:</p>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">1. Safety Guidelines</h4>
+                    <ul class="list-disc pl-5 mb-3">
+                        <li class="mb-2">Adult supervision is required at all times</li>
+                        <li class="mb-2">No food, drinks, or shoes inside the inflatable</li>
+                        <li class="mb-2">No flips, rough play, or climbing on walls</li>
+                        <li class="mb-2">No sharp objects, jewelry, or glasses</li>
+                        <li class="mb-2">Maximum capacity must be observed</li>
+                        <li class="mb-2">Children of similar age and size should play together</li>
+                    </ul>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">2. Weather Policy</h4>
+                    <p class="mb-3">BOUNCE BOSS reserves the right to cancel any booking due to inclement weather conditions (heavy rain, winds exceeding 15mph, lightning, or extreme temperatures). In such cases:</p>
+                    <ul class="list-disc pl-5 mb-3">
+                        <li class="mb-2">BOUNCE BOSS will offer to reschedule your event</li>
+                        <li class="mb-2">If rescheduling is not possible, a full refund will be provided</li>
+                        <li class="mb-2">For customer cancellations due to weather, 24-hour notice is required for full refund</li>
+                    </ul>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">3. Cancellation Policy</h4>
+                    <ul class="list-disc pl-5 mb-3">
+                        <li class="mb-2">Cancellations with 7+ days notice: Full refund</li>
+                        <li class="mb-2">Cancellations with 3-6 days notice: 50% refund</li>
+                        <li class="mb-2">Cancellations with less than 48 hours notice: No refund</li>
+                        <li class="mb-2">Booking date changes require 48-hour notice and are subject to availability</li>
+                    </ul>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">4. Setup Requirements</h4>
+                    <ul class="list-disc pl-5 mb-3">
+                        <li class="mb-2">Customer must provide a flat, clear area of appropriate size for the inflatable</li>
+                        <li class="mb-2">Area must be free of rocks, sticks, sprinklers, and other sharp objects</li>
+                        <li class="mb-2">A power source within 100 feet of setup location is required</li>
+                        <li class="mb-2">Customer is responsible for obtaining any necessary permits or HOA approvals</li>
+                    </ul>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">5. Liability</h4>
+                    <p class="mb-3">The customer assumes all responsibility and liability for any injury or damage to persons or property arising from the use of the rental equipment. BOUNCE BOSS is not responsible for accidents or injuries occurring during the use of rental equipment.</p>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">6. Damage to Equipment</h4>
+                    <p class="mb-3">Customer is responsible for all damage to equipment beyond normal wear and tear. Repair or replacement costs will be charged to the customer's credit card on file.</p>
+                    
+                    <h4 class="font-semibold text-lg mt-4 mb-2">7. Additional Costs</h4>
+                    <p class="mb-5">Additional fees may apply for excessive cleaning requirements, late returns, or setup locations beyond the agreed service area.</p>
+                </div>
+                
+                <form class="mt-6">
+                    <div class="mb-4">
+                        <div class="flex items-center">
+                            <input 
+                                type="checkbox" 
+                                id="agree-terms"
+                                class="mr-2 h-5 w-5"
+                            />
+                            <label for="agree-terms" class="text-gray-800">
+                                I have read and agree to the terms and conditions
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="signature" class="block text-sm font-medium text-gray-700 mb-1">
+                            Please type your full name as signature:
+                        </label>
+                        <input
+                            type="text"
+                            id="signature"
+                            placeholder="Your full name"
+                            class="form-input"
+                            autocomplete="name"
+                        />
+                    </div>
+                    
+                    <div class="flex justify-between">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                        >
+                            Back
+                        </button>
+                        <a 
+                            href="payment.html"
+                            class="btn btn-primary"
+                        >
+                            Agree & Continue to Payment
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">BOUNCE BOSS</h3>
+                    <p class="text-gray-300">
+                        Providing quality bounce houses and inflatable rentals for all your events.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/bounce-houses.html" class="footer-link">Bounce Houses</a></li>
+                        <li><a href="/booking.html" class="footer-link">Book Now</a></li>
+                        <li><a href="/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Email: info@bouncebossinflatables.ca</li>
+                        <li>Phone: (123) 456-7890</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 BOUNCE BOSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
