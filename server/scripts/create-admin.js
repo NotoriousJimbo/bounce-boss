@@ -9,7 +9,7 @@ const supabase = createClient(
 
 async function createAdminUser() {
   const adminEmail = 'admin@bounceboss.com';
-  const adminPassword = 'Admin@123'; // You should change this password
+  const adminPassword = 'Bounce2024!'; // Secure password for demo purposes
 
   try {
     // Check if admin already exists
@@ -61,4 +61,4 @@ async function createAdminUser() {
   }
 }
 
-createAdminUser(); 
+createAdminUser();
